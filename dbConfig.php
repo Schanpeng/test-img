@@ -1,3 +1,6 @@
+
+//setting database connection so that you can just use require_once 'dbConfig', no need to connect database over and over
+
 <?php  
 // Database configuration  
 $dbHost     = "localhost";  
