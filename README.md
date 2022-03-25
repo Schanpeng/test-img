@@ -1,4 +1,5 @@
 # test-img
+# repo to test a simple form to push into local server sql server, including seller information and the item image
 
 1. import sell.sql file into sql server 
 
