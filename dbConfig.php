@@ -15,7 +15,7 @@ $db = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 if ($db->connect_error) {  
     echo 'not connected';
     die("Connection failed: " . $db->connect_error); 
-    
+// if successfully connected to db, show msg    
 } else {
     echo 'connected to db ||| ';
 }
