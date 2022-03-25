@@ -3,7 +3,7 @@
 //initiate database connection
 require_once 'dbConfig.php';
 
-// If file upload form is submitted 
+    // If file upload form is submitted 
     $status = $statusMsg = ''; 
     if(isset($_POST["submit"])){ 
 
@@ -16,7 +16,7 @@ require_once 'dbConfig.php';
 
     //check image file not empty (still need to add more but its working atm)
     if(!empty($_FILES['image']['tmp_name'])) { 
-
+        //get data type and content from image to binary to save to sql BLOB form
         $imgData = addslashes(file_get_contents($_FILES['image']['tmp_name']));
 
 
@@ -30,10 +30,6 @@ require_once 'dbConfig.php';
                 }
             }
         }
-
-
-
-
 
 
 ?>
