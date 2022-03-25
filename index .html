@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sell Page</title>
+        <style>
+            /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+input[type=number]{
+  width: 15%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+        </style>
+</head>
+<body>
+  
+<div class="container">
+  <form action="sell.php" method="post" enctype="multipart/form-data">
+
+    <label for="name">Item Name:</label>
+    <input type="text" id="name" name="name" placeholder="Item Name">
+
+    <label for="price">Item Price:</label>
+    <input type="text" id="price" name="price" placeholder="Ex: $22">
+    <br>
+
+    <label for="quantity">Item Quantity:</label>
+    <br>
+<input type="number" id="quantity" name="quantity" min="1" max="99">
+<br>
+
+<label for="seller">Seller's Email Address:</label>
+    <input type="text" id="seller" name="seller" placeholder="Your Contact Email Address">
+
+    <label for="description">Item Description:</label>
+    <textarea id="description" name="description" placeholder="Write a description of the item your selling..." style="height:200px"></textarea>
+    <label for="image" name = "imagelabel">Item Image:(JPEG, JPG, PNG, and SVG Formats only!)</label>
+    <input type="file" name="image">
+    <br><br>
+    <input type="submit" name='submit' value="Submit Listing">
+</form>
+</div>
+</body>
+</html>
